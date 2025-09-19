@@ -36,7 +36,18 @@ OKay so the header files part is completed
  Now to jump into the coding part
 
 
+ part 1
+--------
 
+ a> The error(const char* msg)  --> function this will help to check for errors in multiple pl    places in the server code mainly during the systemcall functions (the socket funcitons and the file I/O ops).
+
+ b> Then we define the main function with two parameters -- int argc and char* argv[]
+     these contain the info of the file name and the port number the server side socket will b     opened on.
+
+ C> the sockfd and newsockfd file_decriptors are being defined but here there will be changes in the code so that the server can handle multiple clients simultaneoulsy using I/O multiplexing instead of creating new threads or processes for each connection to client.
+ Thus reducing the overhead of creating multiple process and threads.
+
+ 
 
 
 
