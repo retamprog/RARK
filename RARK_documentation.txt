@@ -1,4 +1,4 @@
-Doc:umentation for RARK:
+Documentation for RARK:
 Personal Project about creating a Terminal Window Chat Application because I am fascinatedwith terminals and would want to create application for linux users to communicate using their terminals maybe just like whatsappp or i dont know ...
 
 Lets learn and see what happens !!!!
