@@ -31,6 +31,10 @@ defines the data types and fucntions like socket(),address family defs, etc
   
 5> netinet/in.h ---> it is also socket programming header file used for ip based socket programming. It is mainly used for working with Ipv4 and Ipv6 address,port numbers and network protocols like TCP and UDP.
  
+OKay so the header files part is completed
+ ------------------------------------------------------------------------------------------------------------------------------
+ Now to jump into the coding part
+
 
 
 
