@@ -1,0 +1,63 @@
+___________________
+
+Server Documentation
+____________________
+
+here we will create a documentation for own learning purposes for the server side code
+
+okay first talking about the header files which we are going to use for the server side coding
+
+1>  stdio.h ----> standard input/output libary for C 
+                  has mainly functions like printf() and scanf()
+                 and file handling and error handling functions(perror()) 
+                  and defines I/O streams like stdin, stdout, stderr.
+
+2> stdlib.h -----> it is the standard library in C having general purpose utility functions like memory management(malloc,calloc,realloc,free) Process control(exit,abort,system)
+type convertion fucntions like (atoi(String * str)-- this function will be used in our server code),etc
+
+3> unistd.h ----> it is a header file in C which is POSIX(portable operating system interface) library mainly available for UNIX based os systems like linux/macOS/BSD but not in windows
+
+it mainly has functions which act like wrappers over low level system calls allowing direct interction with the kernel.
+
+eg: read,write, fork, exec , getpid , etc
+
+3> sys/types.h ----> it is also a POSIX standard header file which defines data types used in system calls and low-level OS ops.
+
+it provides typedefs for data type defintions for fixed width integer types and specific identifiers that make the programs portable accross multiple OS systems and hardware.
+eg: pid_t,off_t,ssize_t,etc.
+
+4> sys/socket.h ----> core socket programming API header file in C for network communication on POSIX-compliant systems (linux,MacOs,UNIX)
+defines the data types and fucntions like socket(),address family defs, etc
+  
+5> netinet/in.h ---> it is also socket programming header file used for ip based socket programming. It is mainly used for working with Ipv4 and Ipv6 address,port numbers and network protocols like TCP and UDP.
+ 
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

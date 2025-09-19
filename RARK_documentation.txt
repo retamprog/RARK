@@ -1,0 +1,60 @@
+Doc:umentation for RARK:
+Personal Project about creating a Terminal Window Chat Application because I am fascinatedwith terminals and would want to create application for linux users to communicate using their terminals maybe just like whatsappp or i dont know ...
+
+Lets learn and see what happens !!!!
+
+So first thing that i need to learn is what is Sockets and Socket Programming is...
+
+
+Sockets-- Sockets are nothing more than the sockets which we see around our households which serve as electricity end points for us and give us the neccessary energy.
+But here the concept of Sockets is much more deeper than that it serves as communication end points. Let say there are two people one is the client(Retam) and the ohter is  server(Arkadip) and together we are communicating using a chat application like whatsapp or say we are just communicating on the phone. Here the applications on the phones serves as communication end point. So we can say that socket programming is the concept of applications communicating with each other in the internet.
+
+Now there are few concepts or to say so steps to communication in the internet.
+
+like the above example we take the client-serer model
+
+
+    Server                                  Client
+      |                                       |
+   Socket()                                Socket()
+      |                                       |   
+    Binds()                                   | 
+      |                                       |  
+   listen()<------------------------------- Connect()
+      |                                       |
+   Accept()                                   |
+      |                                       |
+  [ Send()---------------------------------->recieve()] Communication channel             
+  [ recieve()<-------------------------------- send() ]
+  [                                                   ] 
+     Close()                                  close()
+
+Socket is present in both the client and server side applications 
+
+
+1> Youtube tut -- Socket Programming in C from Think and Learn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
