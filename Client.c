@@ -69,11 +69,15 @@ int main(int argc,char * argv[]){
        error("Error on writing!!!");     
     
      memset(buffer,0,256);
-     n = read(sockfd,buffer,strlen(buffer));
+     n = read(sockfd,buffer,sizeof(buffer)-1);
+     if(n>0){
+       buffer[n]='\0';
+     }
      if(n<0){
        error("Error on reading!!");
      }
-     printf("Server: %s\n",buffer);
+     printf("Server: %s",buffer);
+     
      int l = strncmp("Bye",buffer,3);
      if(l==0)
       break;

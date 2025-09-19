@@ -55,7 +55,7 @@ int main(int argc ,char* argv[]){
     //    char sin_zero[8]; // for padding purposes;
     //  }
     //
-    if(bind(sockfd,(struct sockaddr *)&server_addr,sizeof(server_addr)<0)){
+    if(bind(sockfd,(struct sockaddr *)&server_addr,sizeof(server_addr))<0){
 	    error("the socket could'nt be allocated unique addr in the internet!!!!");
 	    
      }
@@ -77,14 +77,17 @@ int main(int argc ,char* argv[]){
     while(1)
     {
        memset(buffer,0,256);
-       n = read(newsockfd,buffer,256);
+       n = read(newsockfd,buffer,sizeof(buffer)-1);
+       if(n>0){
+         buffer[n]='\0';
+       }
        if(n<0){
         error("Error on reading from client..!!");
        }
-       printf("Client: %s\n",buffer);
+       printf("Client: %s",buffer);
        memset(buffer,0,256);
        fgets(buffer,256,stdin); // reading user input from the stdin  
-       n = write(newsockfd,buffer,256);
+       n = write(newsockfd,buffer,strlen(buffer));
 
        if(n<0){
         error("Error on writing to client...!!!");
