@@ -32,7 +32,19 @@ like the above example we take the client-serer model
 Socket is present in both the client and server side applications 
 
 
-1> Youtube tut -- Socket Programming in C from Think and Learn.
+Now for the first demo we were able to create a simple client-server model where the client 
+talks with server vice-versa like a chat application 
+But currently only one client can communicate with server
+
+But our application needs to go beyond that and handle multiple clients simultaneously.
+
+For the above we are going to use I/O multiplexing with the help of the select() function in Socket Programming in C.
+  
+Okay lets first  learn what is I/O multiplexing.
+
+
+
+
 
 
 

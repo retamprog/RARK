@@ -6,6 +6,7 @@
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include<arpa/inet.h> // inet_ntoa() gedit 
 
 // the frequently used error function
 // the canon event code which is going to recurr for many times .... 
@@ -59,6 +60,18 @@ int main(int argc ,char* argv[]){
 	    error("the socket could'nt be allocated unique addr in the internet!!!!");
 	    
      }
+     struct sockaddr_in actual_addr;
+     socklen_t addr_len = sizeof(actual_addr);
+
+	if (getsockname(sockfd, (struct sockaddr *)&actual_addr, &addr_len) == -1) {
+	     error("getsockname");
+	} else {
+	    printf("Server bound to IP: %s, Port: %d\n",
+		      inet_ntoa(actual_addr.sin_addr),
+		      ntohs(actual_addr.sin_port));
+	}
+
+     
     
     // here the listen(file_des,the queue limit number) ---> here the file_des takes the s
     // socket file descriptor and the second parameter is an integer which takes the numb
@@ -73,6 +86,7 @@ int main(int argc ,char* argv[]){
     if(newsockfd<0){
       error("Error while accepting the connection...!!!");
     }
+    // printf("Server is running in the ip : %s",inet_ntoa(server_addr.sin_addr));
 
     while(1)
     {

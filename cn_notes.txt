@@ -1,0 +1,174 @@
+Computer Networking Notes  
+--------------------------
+
+Computer Networking is the study of computers connected to each other in networks and the interconnection of these networks causing the communication between commputer systems using communication protocols.
+
+Protocols - Protocols are the defined set of processes and rules which devices connected in a network follow to communicate with each other. They are like the standardized rules which 
+connected devices across the internet use for communication.
+
+Now using the client-server model we will see the working of the internet.
+
+                            request
+      Google.com  ------------------------------> google server 
+       client     <-----------------------------    server
+                            response
+
+when we type www.google.com in our browser we send a request to the google server and this server sends us a response to the browser which is displayed by the welcome google.com page shown
+in the browser.
+
+---------------------------------------------------------------------------------------------
+
+How do we access the internet ??
+
+In our homes or local offices where we work , we all have these things called the wifi or the ethernet ,etc which are provided by  companies like Jio, Airtel or local companies  like Hathway, Siti, gtpl broadband which provide us with internet services.
+
+These Companies are called ISPs, or to say Internet Service Provider.
+
+So how do they do this?
+
+First of all they provide us with a modem plus router like combo machine because it reduces the cost of having two machines and easy integration for users but gives less customization choices to the users.
+
+Through that device we get our internet connection and Now how all this works we are going to do some deep dive.
+
+Types of signals and their signal processing in Computers
+
+The main two types of signals which are used for processing/sending/recieving info is :
+1> Analog Signal
+2> Digital Signal
+
+Analog Signal: Analog signal is a type of signal that represents continous data using a continous range of values. Meaning, it can take any value in certain range .
+
+eg: the sound wave , electromagnetic waves.
+
+Digital Signals: Digital Signals are type of signals which are used to represent data as sequence of discrete values , mostly using binary values or maybe diff voltage values. Digital signals are discrete and quantized in nature.
+
+ 
+Modem -- modem, short for modulator-demodulator is a device that enables digital communication over analog transmission like telephone lines, cable systems , or fiber optics by converting signals between digital and analog forms
+
+So what it does actually is convert the digital signals of the computer to analog signals for transmissions over analog channels like telephone lines/ fibre optics etc and when it is recived at the other end the modem works as the demodulator which converts the analog signals back to digital signals for the router to process it.
+
+Modem works at the physical layer of the OSI architecture which is responsible for transmision of raw bit streams across networks.
+
+Router -- The Router is a networking device which acts at the connector between multiple networks and directs data packets between them.
+
+It works at the network layer of the OSI architecture using IP address to determine the best path for forwarding the data to its destination.
+
+The Router enables multiple devices to connect to it(having their own private ip's) and gain access to the internet by sharing a single public ip(the global ip) or sometimes a pool of public ips (as required) for internet access
+
+Sometimes Routers also use the DHCP (Dynamic Host Configuration Protocol) 
+ to allocate private ips to the devices connected to the router.
+
+Switch - Switch is essentially a layer 2 device(Data link layer) which helps to connect devices in the same local area network and help in their communication by forwarding data frames in between them using the MAC address of the devices.
+
+
+ 
+Now getting back to the story of providing internet access to our homes or offices by the help of internet service providers which install these modem-router combo devices  connecting  the local devices creating LAN networks and act as the router by routing data packets between them and also convert the digital signals to analog signals for internet access like a modem.
+
+So these devices give a pool of public ip or single global ip which all the devices connected to the router share for access to the internet.
+
+
+
+Each device accessing the internet through any application like web browser/gmail/chat app all these devices in the internet have an ip address and port number which is used to distincguish between the application running in the device accessing the internet.
+
+    DEVICE 1 -----------------------------------------> DEVICE 2
+ (IP/PORT NO) <---------------------------------------(IP/PORT NO)
+
+Here the ip address is like the address in the global internet which is used to identify devices connected in the internet.
+The Port no is a 16 bit number which is used identify the applications running in the device using the internet. It is like a address mapped to each application running in the device to identify them easily instead remembering/mapping the appliction name, analogy- like the roll number of a student in classroom.
+
+
+Now from the 16 bit number we can say that only 2¹⁶-1 port numbes are available (0 - 65535).
+
+
+Ports are like windows which are opened in the networking devices when software applications or operating system operations send/recieve data over networks(LAN or WAN) employing certain protocols like TCP/ UDP.
+
+So Ports are logical addresses  which are used identify system activities or various network services used to create local or network-based communications.
+
+These Ports are assigned sequential numbers from 0- 65535
+
+there are three categories to port numbers:
+1> 0 - 1023 ---> Well known Ports or to say so these are the reserved ports in our system which is assigned by the IANA(Internet Assigned Numbers Authority).
+These ports are used for standard services like Web Browsing or communication over the internet -- http port 80, https port 443, ssh port 22, port 53 DNS, etc.
+
+2> 1024 - 49151 -----> The Registered Ports in our system but not explicitly reserved , these are the ports assigned by the IANA specifically for running those applications in those ports on the system like 
+
+MySQL databse - port 3306
+MongoDB - 27019/27018
+
+3> 49152 - 65535 ----> thee are the ephemeral ports which are used for temporary , short lived connections.
+These are mostly assigned by the OS but can also be customly used freely by the user.
+
+Here each device which connects and communicates on the network like LAN or WAN uses the combination of both the IP and port number to identify as the communication endpoints in the device called the sockets. These sockets are the communication endpoints on the devices which services or software applications create to communicate in the network.
+eg : 192.168.23.40:80 is the socket end point data which is the combo of the  ip of the device along with it specifying the http based communication using port 80.
+
+How is speed in the internet measured or to say how to measure our internet speed.
+
+For this we will borrow data from ookla speed test glossary.
+
+The internet services which are provided by our ISPs are measured by several metrics:
+1> Upload speed - the speed required to transfer/upload  data to another device like a server or another end point device.
+2> Download speed - the speed required to bring or download data to our devices from data centre like a server or end point device.
+3> Ping - Ping is the latency measure which measures how fast we get the response from the server which we are connected for data communication purposes over the internet.
+          Like in Gaming Ping is the most important during lag situations like we check the ping timing low ping --> low latency ----> fast response from the server and vice versa for high 
+          latency caused by high ping values.
+
+The speed is mostly measured in units like mbps ( mega bits per second )
+   --- mbps - 10⁶ bits per second
+   --- gbps - 10⁹ bits per second
+   --- kbps - 10³ bits per second
+
+But the question still remains how is the internet or all these data is transferred between devices encompassing inter-state/inter-city/inter-country.
+
+Now there are two ways of doing it :
+
+One is the guided way and other is the unguided way.
+
+The guided way meaning that the data communication occurs through fixed paths where the data flows through wires or telecommunication cables.
+
+The Unguided way meaning that the data communication occurs through not any fixed paths but through radio/electomagnetic signals like wifi/Access points,etc.
+
+The main example of the guided way is The Submarine Cables which are buried under the sea bed for telecommunication accros countries and data transmission trans-country.
+
+Showing an overview of how this occurs --- The whole picture .
+
+Country A---wifi/router---LAN--ISP--National Backbone Routers---Cable Landing station ---- SubmarineCables----DstLandingStat---Backbone Routers---Servers----ISP---LAN---wifi/router--CountryB
+(India)                                                                                                                                         (Data Centers)                       (Germany)
+
+                                                                                                                                                                                              The above is the whole process of cross country communication using the mostly widely used data transmission channels the Submarine Cables.
+
+The Submarine cables are still the backbone for trans-country communication channels and operate at mostly 10⁶bits per seconds speed.
+
+Most Countries are connected to each other by these submarine cables , the only exception being the Antartica because of it's  high economical costs for installation and maintainese charges 
+which it make it highly unsuitable for submarine cables.
+Most of the land of Antartica is covered by satellites for communication which are expensive and slower than Submarine cables.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The Types of Networks
+--------------------------------------------------------------------
+
+PAN(Personal Area Network)-- 
+As the name suggests ,it is the most smallest type of network that connects all the devices inthe immediate vicinity of the person, eg: Bluetooth connection like headphones , the keyboard and the mouse.
+
+LAN(Local area Network)--
+it is the network of devices in a certain locality or limited geographic area such as homes , office or the whole building like college provided wifis etc.
+
+	
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
