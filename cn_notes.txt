@@ -148,11 +148,121 @@ The Types of Networks
 
 PAN(Personal Area Network)-- 
 As the name suggests ,it is the most smallest type of network that connects all the devices inthe immediate vicinity of the person, eg: Bluetooth connection like headphones , the keyboard and the mouse.
-
+-----------------------------------------
+The breakdown of the internet structure
+-----------------------------------------
 LAN(Local area Network)--
 it is the network of devices in a certain locality or limited geographic area such as homes , office or the whole building like college provided wifis etc.
 
+MAN(Metropolitan area network)--
+A MAN is a larger network type than the LAN which spans over a larger geographical area like acity or a university campus connecting multiple buildings.
+
+WAN(Wide Area Network)---
+WANs are the type of networks which are larger than MAN and connects multilpe MANS and LANS together spanning  countries or continents.
+
+we can say that the internet is the largest WAN and this whole collection of LANS,MANS and WANS form our Internet.
+
+WANS mostly use Optical fibre cables:
+     1> SoNET- Synchronous Optical Networking-- Basically caries data using Optical fibre cables     
+     2> Frame Relay
+
+Sonet -- Synchronous Optical Network is a communication protocol which was created by the Bell
+core company and is used to transmit large amounts of data over long distances using optical fibre cables. It is was moslty used in North America for digital communications and is very similar to its European counterpart the SDH(Synchronous Digital Hierarchy) protocol.
+
+It was standardized by the ANSI
+
+Before this let's see the device which is mostly used in the SONET protocol process is the multiplexe.It is a simple digital logic circuit that selects one of the several inputs and directs it as the output , now the input line is decided by the select lines which is decided by the number of input lines. Consider it like multi-input single output circuit.
+If there are 2ᵏinput lines then there are k select lines which determine which input line will be selected for the output.
+
+------------------------------
+SONET Network architecture
+------------------------------
+
+
+STS Mux/Demux------Regenerator--------ADD/DROP MUX--------Regenerator------STS Mux/Demux
+
+<-------Section---->
+<------------------Line--------------->
+<----------------------------------Path------------------------------------->
+
+Section--> Portion of the network which connects two neighbouring devices
+Line-----> Portion of the network which connects two neighbouring multiplexers.
+Path-----> the whole entire network end to end.
+
+Advantages of SONET:
+1> Transmits data to large distances.
+2> low electromagnetic interference
+3> High data rates
+4> large bandwidths.
+
+Disadvantages of SONET:
+1> There are no compatibility standards
+2> there are a limited number of channels which is both inexpensive and inefficient.
+3> the SONET/SDH network management sys is inadequate for administering the DWDM technology.
 	
+Dense Wavelength Division Multiplexing (DWDM) is an optical technology that significantly increases the bandwidth of a single optical fiber by transmitting multiple seperate data streams, each on a different, closely spaced wavelength of light.
+
+The network architecture requires again multiplexers, demultiplexers and optical amplifiers which combine and seperate these wavelengths, to transmit high capacity data over long distance.
+
+The main advantage of the DWDM:
+1> Increased Bandwidth: Massively increases the data carrying capacity of the optical fiber
+2> Cost effective: reduces the relaying of new cables for larger data transmission.
+3> High Capacity: increases the capacity of the existing optical fiber architecture.
+
+-----------------------------  
+Frame Relay	
+---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
   
 
