@@ -211,7 +211,9 @@ The main advantage of the DWDM:
 
 -----------------------------  
 Frame Relay	
----------------------------
+-----------------------------
+
+The Frame Relay is another WAN based protocol which is based on the  packet switching technology of  networks.
 
 
 
