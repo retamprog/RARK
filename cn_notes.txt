@@ -213,7 +213,24 @@ The main advantage of the DWDM:
 Frame Relay	
 -----------------------------
 
-The Frame Relay is another WAN based protocol which is based on the  packet switching technology of  networks.
+The Frame Relay is another WAN based protocol which is based on the  packet switching technology of  networks. It works in the layer 2(Data link layer) of the OSI model.
+It is used to connect LANS accross WANS.It is based on the packet switching tech of networks.
+
+Now before understanding Frame Relay we need to step back and understand leased lines.
+
+What is a leased line?
+
+A Leased line is a like dedicated duplex connection between two sites, having fixed data bandwidth connection.
+The leased line is not some cable which connects two sites , it is a lot more than that it has two cables unidirectional in opposite ways for full duplex communication and is mostly taken on
+rent/ subscription basis from a local ISPs due to their large geographical coverage.
+
+But these leased lines are highly costly and expensive moreover there connectivity is only point to point not anymore than that and nobody can share the excess bandwidth which is preallocatedto leased line and it was not at all scalable.
+
+Earlier in those days the X.25 protocol was used for packect switched networks which has high amount of error connection and high overhead making it really slow and tedious.
+
+Now my question is what does packet switched networks mean ?
+Packet switching networks are like digital communication networks 
+
 
 
 
